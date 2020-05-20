@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#6E45E2</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="black_overlay">#66000000</color>
+
+    <color name="color">#42BCB4</color>
+    <color name="color2">#6E45E2</color>
+    <color name="color3">#FFFFFF</color>
+    <color name="color4">#EDEDED</color>
+    <color name="color5">#F0ECFC</color>
+
+    <color name="black_overlay">#000000</color>
+
+
+    <color name="button_default_color">#FFFFFF</color>
+    <color name="button_selected_color">#42BCB4</color>
+    <color name="button_disabled_color">#4033d9c3</color>
+    <color name="button_text_color">#FFFFFF</color>
 </resources>

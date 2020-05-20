@@ -1,53 +1,64 @@
-package br.gov.es.sedu.educacao;
+package org.aprendendosempre.app;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.JsonReader;
-import android.util.JsonToken;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.webkit.ValueCallback;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.datami.smi.SdState;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+import static androidx.core.app.NotificationCompat.getExtras;
+
+public class WebViewActivity extends AppCompatActivity {
 
     WebView myWebView;
+    Exception exception;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
             super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_web_view);
+
+            String link = getIntent().getExtras().getString("Link");
+
+
             myWebView = new WebView(this);
             myWebView.setWebViewClient(new MyWebViewClient());
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             Locale.setDefault(new Locale("pt", "BR"));
             setContentView(myWebView);
-            myWebView.loadUrl("https://pt.khanacademy.org");
+            myWebView.loadUrl(link);
         }
         catch (Exception e)
         {
-
+            exception = e;
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void back(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -95,31 +106,16 @@ public class MainActivity extends AppCompatActivity {
                         URL urlEntrada = null;
                         urlEntrada = new URL(url);
                         List<String> urlsPermitidas = new ArrayList<String>(25);
-                        urlsPermitidas.add("classroom.google.com");
-                        urlsPermitidas.add("accounts.google.com");
-                        urlsPermitidas.add("googledrive.com");
-                        urlsPermitidas.add("drive.google.com");
-                        urlsPermitidas.add("docs.google.com");
-                        urlsPermitidas.add("c.docs.google.com");
-                        urlsPermitidas.add("sheets.google.com");
-                        urlsPermitidas.add("slides.google.com");
-                        urlsPermitidas.add("takeout.google.com");
-                        urlsPermitidas.add("gg.google.com");
-                        urlsPermitidas.add("script.google.com");
-                        urlsPermitidas.add("ssl.google-analytics.com");
-                        urlsPermitidas.add("video.google.com");
-                        urlsPermitidas.add("s.ytimg.com");
-                        urlsPermitidas.add("apis.google.com");
-                        urlsPermitidas.add("googleapis.com");
-                        urlsPermitidas.add("googleusercontent.com");
-                        urlsPermitidas.add("gstatic.com");
-                        urlsPermitidas.add("gvt1.com");
-                        urlsPermitidas.add("edu.google.com");
-                        urlsPermitidas.add("accounts.youtube.com");
-                        urlsPermitidas.add("myaccount.google.com");
-                        urlsPermitidas.add("forms.gle");
-                        urlsPermitidas.add("pt.khanacademy.org");
-//                        urlsPermitidas.add("google.com");
+                        urlsPermitidas.add("aprendendosempre.org/");
+                        urlsPermitidas.add("www.aprendizap.com.br/");
+                        urlsPermitidas.add("app.arvoreeducacao.com.br/");
+                        urlsPermitidas.add("avamec.mec.gov.br/");
+                        urlsPermitidas.add("escoladigital.org.br/");
+                        urlsPermitidas.add("edu.google.com/");
+                        urlsPermitidas.add("pt.khanacademy.org/");
+                        urlsPermitidas.add("www.kinedu.com/pt");
+                        urlsPermitidas.add("novaescola.org.br/");
+                        urlsPermitidas.add("youtube.com/");
 
                         //TODO: fazer um filtro inteligente de URLs
                         for (int i = 0; i <= urlsPermitidas.size() -1; i++)

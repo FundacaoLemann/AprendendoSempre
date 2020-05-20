@@ -1,4 +1,4 @@
-package br.gov.es.sedu.educacao;
+package org.aprendendosempre.app;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("br.gov.es.sedu.educacao", appContext.getPackageName());
+        assertEquals("org.aprendendosempre.app", appContext.getPackageName());
     }
 }

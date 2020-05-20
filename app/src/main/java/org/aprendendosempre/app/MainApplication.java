@@ -1,8 +1,7 @@
-package br.gov.es.sedu.educacao;
+package org.aprendendosempre.app;
 
 import android.app.Application;
 import android.content.Context;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,7 +19,7 @@ public class MainApplication extends Application implements SdStateChangeListene
         duration = Toast.LENGTH_LONG;
     }
 
-    private static final String TAG = MainActivity.class.getName();
+    private static final String TAG = WebViewActivity.class.getName();
     public static SdState sdState;
     @Override
     public void onChange(SmiResult currentSmiResult) {

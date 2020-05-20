@@ -1,4 +1,4 @@
-package br.gov.es.sedu.educacao;
+package org.aprendendosempre.app;
 
 import org.junit.Test;
 

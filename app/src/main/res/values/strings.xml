@@ -1,6 +1,22 @@
 <resources>
-    <string name="app_name">EscoLAR</string>
+    <string name="app_name">Aprendendo Sempre</string>
     <string name="texto_splash">Acesso via Wifi: todos os sites liberados.\nAcesso Patrocinado: apenas google for education e google forms.</string>
-    <string name="title_activity_splash_screen">EscoLAR</string>
+    <string name="title_activity_splash_screen">Aprendendo Sempre</string>
     <string name="btn_continuar">Continuar</string>
+
+
+    <!-- Bottom Navigation -->
+    <string name="home">Home</string>
+    <string name="about">Sobre</string>
+    
+    
+    <!-- Home -->
+    <string name="home_hello">Olá!</string>
+    <string name="home_text1">Explore recursos,</string>
+    <string name="home_text2">sem nenhum custo.</string>
+    <string name="home_btn">Saiba mais</string>
+    <string name="home_app">Aplicativos &amp; Sites</string>
+    <string name="home_you"><![CDATA[ Você não gasta seu <b>dados móveis</b>!]]></string>
+
+    <string name="fa_close"></string>
 </resources>

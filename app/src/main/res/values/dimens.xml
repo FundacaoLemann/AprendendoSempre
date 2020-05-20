@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_layout_search_container_height">100dp</dimen>
+    <dimen name="home_layout_search_bar_height">55dp</dimen>
+    <dimen name="home_layout_search_bar_margin">20dp</dimen>
+    <dimen name="home_layout_cardview_corner_radius">28dp</dimen>
+    <dimen name="home_layout_search_img_size">25dp</dimen>
+    <dimen name="home_layout_search_img_margin">10dp</dimen>
+    <dimen name="home_layout_zero_size">0dp</dimen>
+    <dimen name="home_layout_default_margin">8dp</dimen>
+    <dimen name="home_layout_selling_by_text_size">18sp</dimen>
+    <dimen name="home_layout_name_seller_margin_top">85dp</dimen>
+    <dimen name="home_layout_name_seller_margin_bottom">8dp</dimen>[
+    <dimen name="home_layout_margin_start_hello">8dp</dimen>
+    <dimen name="home_layout_margin_button_search">8dp</dimen>
+    <dimen name="home_layout_padding_button_search">6dp</dimen>
+    <dimen name="home_layout_text_view_search">8dp</dimen>
+    <dimen name="size_font_text_search">16sp</dimen>
+    <dimen name="home_layout_margin_banner_start_end">30dp</dimen>
+    <dimen name="home_layout_margin_banner_bottom">30dp</dimen>
+    <dimen name="home_layout_margin_top_search">40dp</dimen>
+
+
+    <dimen name="product_layout_height">0dp</dimen>
+    <dimen name="product_layout_margin_top">8dp</dimen>
+    <dimen name="product_layout_image_width">109dp</dimen>
+    <dimen name="product_layout_image_height">100dp</dimen>
+    <dimen name="product_layout_image_margin">8dp</dimen>
+    <dimen name="product_name_layout_width">0dp</dimen>
+    <dimen name="product_name_margin_start_end">8dp</dimen>
+    <dimen name="product_name_margin_top">15dp</dimen>
+    <dimen name="size_font_name_product">16sp</dimen>
+    <dimen name="product_layout_item_available_width">0dp</dimen>
+    <dimen name="product_layout_item_available_margin_start">6dp</dimen>
+    <dimen name="product_layout_item_available_margin_top">9dp</dimen>
+    <dimen name="product_layout_text_price_width">0dp</dimen>
+    <dimen name="product_layout_text_margin_top">8dp</dimen>
+    <dimen name="size_font_text_price">18sp</dimen>
+    <dimen name="product_image_item_available_layout_width">20dp</dimen>
+    <dimen name="product_image_item_available_layout_height">18dp</dimen>
+    <dimen name="product_image_item_available_margin_top">8dp</dimen>
+    <dimen name="product_text_cod_gemco_margin_end">3dp</dimen>
+    <dimen name="size_font_text_cod_gemco">13sp</dimen>
+    <dimen name="product_text_cod_gemco_number_margin">8dp</dimen>
+    <dimen name="size_font_text_cod_gemco_number">18sp</dimen>
+    <dimen name="activity_product_message_user_size">15sp</dimen>
+    <dimen name="activity_product_text_view_message_user_margin_top">5dp</dimen>
+    <dimen name="activity_product_image_view_not_found_size_width">130dp</dimen>
+    <dimen name="activity_product_image_view_not_found_size_height">80dp</dimen>
+</resources>
