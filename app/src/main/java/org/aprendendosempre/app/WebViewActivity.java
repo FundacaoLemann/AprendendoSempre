@@ -69,7 +69,7 @@ public class WebViewActivity extends AppCompatActivity {
             return true;
         }
         // If it wasn't the Back key or there's no web page history, bubble up to the default
-        // system behavior (probably exit the activity)
+        // system behavior (probably exit the activity_main)
         return super.onKeyDown(keyCode, event);
     }
 
@@ -99,16 +99,16 @@ public class WebViewActivity extends AppCompatActivity {
                  if(url.startsWith("javascript"))
                      return false;
 
-                if (url.startsWith("http") || url.startsWith("https"))
+                if(MainApplication.sdState == SdState.SD_AVAILABLE)
                 {
-                    if(MainApplication.sdState == SdState.SD_AVAILABLE)
+                    if (url.startsWith("http") || url.startsWith("https"))
                     {
                         URL urlEntrada = null;
                         urlEntrada = new URL(url);
                         List<String> urlsPermitidas = new ArrayList<String>(25);
                         urlsPermitidas.add("aprendendosempre.org/");
                         urlsPermitidas.add("www.aprendizap.com.br/");
-                        urlsPermitidas.add("app.arvoreeducacao.com.br/");
+                        urlsPermitidas.add("arvoreeducacao.com.br/");
                         urlsPermitidas.add("avamec.mec.gov.br/");
                         urlsPermitidas.add("escoladigital.org.br/");
                         urlsPermitidas.add("edu.google.com/");

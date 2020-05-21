@@ -2,14 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/page_home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_home_black_24dp"
         android:iconTint="@color/color"
-        android:enabled="true"
         android:title="@string/home"/>
     <item
         android:id="@+id/page_about"
-        android:icon="@drawable/ic_list"
-        android:iconTint="@color/color"
+        android:icon="@drawable/ic_featured_play_list_black_24dp"
         android:enabled="true"
+        android:iconTint="@color/color"
         android:title="@string/about"/>
 </menu>

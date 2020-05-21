@@ -47,4 +47,7 @@
     <dimen name="activity_product_text_view_message_user_margin_top">5dp</dimen>
     <dimen name="activity_product_image_view_not_found_size_width">130dp</dimen>
     <dimen name="activity_product_image_view_not_found_size_height">80dp</dimen>
+
+
+    <dimen name="test">20dp</dimen>
 </resources>

@@ -17,6 +17,48 @@
     <string name="home_btn">Saiba mais</string>
     <string name="home_app">Aplicativos &amp; Sites</string>
     <string name="home_you"><![CDATA[ Você não gasta seu <b>dados móveis</b>!]]></string>
+    <string name="aprendendo">Aprendendo\nSempre</string>
+    <string name="aprendizap">Aprendizap</string>
+    <string name="arvoveredu">Árvore\n Educação</string>
+    <string name="avamec____">AvaMec</string>
+    <string name="escoladigi">Escola Digital</string>
+    <string name="googlesala">Google Sala\nde Aula</string>
+    <string name="khanacadem">Khan\nAcademy</string>
+    <string name="kinedu____">Kinedu</string>
+    <string name="novaescola">Nova Escola</string>
 
-    <string name="fa_close"></string>
+
+    <!-- About -->
+    <string name="about_title">Sobre o projeto</string>
+    <string name="about_text">A plataforma Aprendendo Sempre é resultado de um esforço coletivo de organizações
+sociais do terceiro setor, associadas ao Consed (Conselho Nacional de Secretários de
+Educação) e à Undime (União Nacional dos Dirigentes Municipais de Educação), para apoiar
+gestores educacionais, professores e famílias a garantir que todos os estudantes
+continuem aprendendo e se desenvolvendo durante a pandemia de Covid-19, que suspendeu as
+aulas em todo o Brasil.\n\n
+Promover atividades de ensino e aprendizagem fora das escolas, de forma efetiva e com
+equidade, tornou-se um desafio sem precedentes para a comunidade escolar. Esta
+plataforma reúne uma curadoria de conteúdos e soluções gratuitas para ajudar a facilitar
+esta tarefa.\n\n
+Em um ambiente único, estão disponíveis indicações de ferramentas com conteúdos
+pedagógicos alinhados à BNCC (Base Nacional Comum Curricular), documento que mostra
+quais são as aprendizagens essenciais para todos os estudantes brasileiros. Além disso,
+há tecnologias que viabilizam a preparação e a transmissão de aulas online, além de
+recomendações para o bom uso dessas soluções e de como é possível promover experiências
+saudáveis e significativas para crianças, adolescentes e jovens remotamente.Com intuito
+de inspirar professores e gestores, casos e histórias de quem que já está conseguindo
+promover aulas a distância também podem ser encontradas na Aprendendo Sempre, bem como
+uma agenda de eventos, cursos, webinários e outras atividades de formação e troca de
+informações online.\n\n
+Para as famílias, há recomendações de ferramentas e atividades, além de dicas de como
+elas podem ajudar crianças e adolescentes em casa.\n\n
+Sem a pretensão de fornecer soluções definitivas, a Aprendendo Sempre procura apontar
+diferentes possibilidades para que os estudantes tenham o seu direito de aprender
+preservado. Seu conteúdo seguirá em construção coletiva, com o foco em atender as
+demandas de educadores e familiares, enquanto a pandemia de coronavírus estiver
+interferindo nas rotinas das escolas. Se você tem algum desafio para o qual precisa
+ajuda ou gostaria de compartilhar conteúdos úteis, entre em contato.Saiba quem já está
+colaborando para a Aprendendo Sempre:</string>
+
+
 </resources>
