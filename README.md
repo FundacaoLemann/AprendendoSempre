@@ -1,4 +1,4 @@
-# app-sedu
+# app-aprendendo sempre
 Criar um arquivo secrets.xml dentro da pasta /res/values e adicionar a chave de API.
 
 ```xml
