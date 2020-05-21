@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/selector_corner_top_rectangle"
-    app:behavior_peekHeight="370dp"
-    android:paddingTop="18dp"
+    app:behavior_peekHeight="500dp"
+    android:paddingTop="16dp"
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <TextView

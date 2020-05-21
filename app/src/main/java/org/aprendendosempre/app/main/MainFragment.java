@@ -1,13 +1,18 @@
 package org.aprendendosempre.app.main;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,6 +25,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import org.aprendendosempre.app.R;
 
 import java.util.ArrayList;
@@ -28,6 +36,8 @@ import java.util.List;
 
 public class MainFragment extends Fragment {
 
+    View bottomSheet;
+    BottomSheetBehavior behavior;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -38,6 +48,13 @@ public class MainFragment extends Fragment {
 
             setupView(view);
             setRecyclerView(view);
+
+            bottomSheet = view.findViewById(R.id.bottomSheetLayout);
+            behavior = BottomSheetBehavior.from(bottomSheet);
+            ScreenUtils screenUtils=new ScreenUtils(requireActivity());
+
+            behavior.setPeekHeight(screenUtils.getHeight()-convertDpToPixels(300,requireActivity()));
+
             return view;
 
         } catch (Exception e) {
@@ -50,6 +67,14 @@ public class MainFragment extends Fragment {
                     }).show();
             return null;
         }
+    }
+
+    public static int convertDpToPixels(float dp, Activity context){
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        float density = metrics.density;
+        return (int) Math.ceil(dp * density);
     }
 
 
@@ -159,6 +184,54 @@ public class MainFragment extends Fragment {
             if(position%columns==0){
                 outRect.left = margin;
             }
+        }
+    }
+
+
+    public class ScreenUtils {
+
+        Context ctx;
+        DisplayMetrics metrics;
+
+        public ScreenUtils(Context ctx) {
+            this.ctx = ctx;
+            WindowManager wm = (WindowManager) ctx
+                    .getSystemService(Context.WINDOW_SERVICE);
+
+            Display display = wm.getDefaultDisplay();
+            metrics = new DisplayMetrics();
+            display.getMetrics(metrics);
+
+        }
+
+        public int getHeight() {
+            return metrics.heightPixels;
+        }
+
+        public int getWidth() {
+            return metrics.widthPixels;
+        }
+
+        public int getRealHeight() {
+            return metrics.heightPixels / metrics.densityDpi;
+        }
+
+        public int getRealWidth() {
+            return metrics.widthPixels / metrics.densityDpi;
+        }
+
+        public int getDensity() {
+            return metrics.densityDpi;
+        }
+
+        public int getScale(int picWidth) {
+            Display display
+                    = ((WindowManager) ctx.getSystemService(Context.WINDOW_SERVICE))
+                    .getDefaultDisplay();
+            int width = display.getWidth();
+            Double val = new Double(width) / new Double(picWidth);
+            val = val * 100d;
+            return val.intValue();
         }
     }
 }
