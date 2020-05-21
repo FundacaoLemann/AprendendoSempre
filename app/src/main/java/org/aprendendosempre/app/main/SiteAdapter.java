@@ -1,4 +1,4 @@
-package org.aprendendosempre.app;
+package org.aprendendosempre.app.main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.aprendendosempre.app.R;
+import org.aprendendosempre.app.WebViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;

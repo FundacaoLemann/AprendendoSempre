@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import org.aprendendosempre.app.main.MainActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override

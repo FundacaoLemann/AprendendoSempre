@@ -7,24 +7,22 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.datami.smi.SdState;
+
+import org.aprendendosempre.app.main.MainActivity;
 
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import static androidx.core.app.NotificationCompat.getExtras;
 
 public class WebViewActivity extends AppCompatActivity {
 
@@ -69,7 +67,7 @@ public class WebViewActivity extends AppCompatActivity {
             return true;
         }
         // If it wasn't the Back key or there's no web page history, bubble up to the default
-        // system behavior (probably exit the activity_main)
+        // system behavior (probably exit the main_fragment)
         return super.onKeyDown(keyCode, event);
     }
 

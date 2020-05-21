@@ -1,4 +1,4 @@
-package org.aprendendosempre.app;
+package org.aprendendosempre.app.main;
 
 public class Site {
 
