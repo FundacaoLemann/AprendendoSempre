@@ -3,40 +3,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mCardViewBanner"
-    android:layout_width="180dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_width="150dp"
+    android:layout_height="180dp"
     android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_gravity="center_horizontal"
     android:foreground="?android:selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    app:cardBackgroundColor="@color/color4"
+    app:cardBackgroundColor="@color/color5"
     app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mConstraintLayoutContainer"
-        android:layout_width="179dp"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mImageProduct"
-            android:layout_width="@dimen/product_layout_image_width"
-            android:layout_height="@dimen/product_layout_image_height"
-            android:layout_gravity="left"
-            android:layout_margin="@dimen/product_layout_image_margin"
-            android:layout_marginStart="@dimen/product_layout_image_margin"
-            android:layout_marginTop="@dimen/product_layout_image_margin"
+            android:id="@+id/item"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circle_drawable_color_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/circle_drawable_color_2" >
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/img_card"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:src="@mipmap/logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -46,19 +45,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/title_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:text="Teste"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="@string/aprendendo"
             android:textColor="@color/black_overlay"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mImageProduct" />
+            app:layout_constraintTop_toBottomOf="@+id/item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

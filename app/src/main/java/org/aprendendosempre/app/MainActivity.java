@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         } catch (Exception e) {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setTitle( getString(R.string.app_name) )
-                    .setIcon(R.drawable.ic_launcher_background)
                     .setMessage("Error")
                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialoginterface, int i) {
@@ -67,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         intent.putExtra("Link", link);
         startActivity(intent);
     }
+
+
 
 
 

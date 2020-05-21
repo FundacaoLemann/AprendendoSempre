@@ -69,14 +69,17 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct1"
+                    android:id="@+id/mImage1"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct2"
+                    app:layout_constraintEnd_toStartOf="@+id/mImage2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -92,15 +95,18 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct2"
+                    android:id="@+id/mImage2"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct3"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct1"
+                    app:layout_constraintEnd_toStartOf="@+id/mImage3"
+                    app:layout_constraintStart_toEndOf="@+id/mImage1"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
@@ -115,15 +121,18 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct3"
+                    android:id="@+id/mImage3"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct4"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct2"
+                    app:layout_constraintEnd_toStartOf="@+id/mImage4"
+                    app:layout_constraintStart_toEndOf="@+id/mImage2"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
@@ -138,16 +147,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct4"
+                    android:id="@+id/mImage4"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct3"
+                    app:layout_constraintStart_toEndOf="@+id/mImage3"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
@@ -163,16 +175,19 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct5"
+                    android:id="@+id/mImage5"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct6"
+                    app:layout_constraintEnd_toStartOf="@+id/mImage6"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct1">
+                    app:layout_constraintTop_toBottomOf="@+id/mImage1">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -186,16 +201,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct6"
+                    android:id="@+id/mImage6"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct7"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct5"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct2">
+                    app:layout_constraintEnd_toStartOf="@+id/mImage7"
+                    app:layout_constraintStart_toEndOf="@+id/mImage5"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage2">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -209,16 +227,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct7"
+                    android:id="@+id/mImage7"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct8"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct6"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct3">
+                    app:layout_constraintEnd_toStartOf="@+id/mImage8"
+                    app:layout_constraintStart_toEndOf="@+id/mImage6"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage3">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -232,17 +253,20 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct8"
+                    android:id="@+id/mImage8"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct7"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct4">
+                    app:layout_constraintStart_toEndOf="@+id/mImage7"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage4">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -256,16 +280,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct9"
+                    android:id="@+id/mImage9"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct10"
+                    app:layout_constraintEnd_toStartOf="@+id/mImage10"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct5">
+                    app:layout_constraintTop_toBottomOf="@+id/mImage5">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -279,16 +306,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct10"
+                    android:id="@+id/mImage10"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct11"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct9"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct6">
+                    app:layout_constraintEnd_toStartOf="@+id/mImage11"
+                    app:layout_constraintStart_toEndOf="@+id/mImage9"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage6">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -302,16 +332,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct11"
+                    android:id="@+id/mImage11"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct12"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct10"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct7">
+                    app:layout_constraintEnd_toStartOf="@+id/mImage12"
+                    app:layout_constraintStart_toEndOf="@+id/mImage10"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage7">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -325,17 +358,20 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct12"
+                    android:id="@+id/mImage12"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct11"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct8">
+                    app:layout_constraintStart_toEndOf="@+id/mImage11"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage8">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -349,18 +385,21 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct13"
+                    android:id="@+id/mImage13"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="26dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct14"
+                    app:layout_constraintEnd_toStartOf="@+id/mImage14"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct9">
+                    app:layout_constraintTop_toBottomOf="@+id/mImage9">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -374,18 +413,21 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct14"
+                    android:id="@+id/mImage14"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="26dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct15"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct13"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct10">
+                    app:layout_constraintEnd_toStartOf="@+id/mImage15"
+                    app:layout_constraintStart_toEndOf="@+id/mImage13"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage10">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -399,18 +441,21 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct15"
+                    android:id="@+id/mImage15"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="26dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/mImageProduct16"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct14"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct11">
+                    app:layout_constraintEnd_toStartOf="@+id/mImage16"
+                    app:layout_constraintStart_toEndOf="@+id/mImage14"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage11">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -424,7 +469,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/mImageProduct16"
+                    android:id="@+id/mImage16"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -432,11 +477,14 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="26dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:selectableItemBackground"
                     android:background="@drawable/selector_card_about_item"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mImageProduct15"
-                    app:layout_constraintTop_toBottomOf="@+id/mImageProduct12">
+                    app:layout_constraintStart_toEndOf="@+id/mImage15"
+                    app:layout_constraintTop_toBottomOf="@+id/mImage12">
 
                     <ImageView
                         android:layout_width="60dp"
