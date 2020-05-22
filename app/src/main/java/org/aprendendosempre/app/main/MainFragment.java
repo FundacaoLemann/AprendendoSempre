@@ -2,7 +2,6 @@ package org.aprendendosempre.app.main;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -15,10 +14,9 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
@@ -26,7 +24,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import org.aprendendosempre.app.R;
 
@@ -58,13 +55,7 @@ public class MainFragment extends Fragment {
             return view;
 
         } catch (Exception e) {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(requireContext());
-            dialog.setTitle(getString(R.string.app_name))
-                    .setMessage("Error")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialoginterface, int i) {
-                        }
-                    }).show();
+            Toast.makeText(requireContext(), "Error :" + e , Toast.LENGTH_SHORT).show();
             return null;
         }
     }
@@ -105,7 +96,6 @@ public class MainFragment extends Fragment {
         RecyclerViewMargin decoration = new RecyclerViewMargin(12, 2);
         recyclerView.addItemDecoration(decoration);
         recyclerView.setLayoutManager(mLayoutManager);
-
 
 
         SearchView searchView = view.findViewById(R.id.searchView);

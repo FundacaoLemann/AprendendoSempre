@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -15,8 +17,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.datami.smi.SdState;
-
-import org.aprendendosempre.app.main.MainActivity;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -49,14 +49,48 @@ public class WebViewActivity extends AppCompatActivity {
         catch (Exception e)
         {
             exception = e;
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error :" + e , Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void back(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_web_view, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_back:
+                onBackPressed();
+                break;
+            case R.id.menu_forward:
+                onForwardPressed();
+                break;
+            case R.id.menu_reload:
+                myWebView.reload();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void onForwardPressed(){
+        if(myWebView.canGoForward()){
+            myWebView.goForward();
+        }else{
+            finish();
+        }
+    }
+
+    @Override
+    public void onBackPressed(){
+        if(myWebView.canGoBack()){
+            myWebView.goBack();
+        }else{
+            finish();
+        }
     }
 
     @Override
@@ -113,7 +147,29 @@ public class WebViewActivity extends AppCompatActivity {
                         urlsPermitidas.add("pt.khanacademy.org/");
                         urlsPermitidas.add("www.kinedu.com/pt");
                         urlsPermitidas.add("novaescola.org.br/");
-                        urlsPermitidas.add("youtube.com/");
+                        urlsPermitidas.add("classroom.google.com");
+                        urlsPermitidas.add("accounts.google.com");
+                        urlsPermitidas.add("googledrive.com");
+                        urlsPermitidas.add("drive.google.com");
+                        urlsPermitidas.add("docs.google.com");
+                        urlsPermitidas.add("c.docs.google.com");
+                        urlsPermitidas.add("sheets.google.com");
+                        urlsPermitidas.add("slides.google.com");
+                        urlsPermitidas.add("takeout.google.com");
+                        urlsPermitidas.add("gg.google.com");
+                        urlsPermitidas.add("script.google.com");
+                        urlsPermitidas.add("ssl.google-analytics.com");
+                        urlsPermitidas.add("video.google.com");
+                        urlsPermitidas.add("s.ytimg.com");
+                        urlsPermitidas.add("apis.google.com");
+                        urlsPermitidas.add("googleapis.com");
+                        urlsPermitidas.add("googleusercontent.com");
+                        urlsPermitidas.add("gstatic.com");
+                        urlsPermitidas.add("gvt1.com");
+                        urlsPermitidas.add("edu.google.com");
+                        urlsPermitidas.add("accounts.youtube.com");
+                        urlsPermitidas.add("myaccount.google.com");
+                        urlsPermitidas.add("forms.gle");
 
                         //TODO: fazer um filtro inteligente de URLs
                         for (int i = 0; i <= urlsPermitidas.size() -1; i++)

@@ -1,11 +1,9 @@
 package org.aprendendosempre.app.main;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -43,13 +41,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             navigationView.setOnNavigationItemSelectedListener(this);
 
         } catch (Exception e) {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            dialog.setTitle( getString(R.string.app_name) )
-                    .setMessage("Error")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialoginterface, int i) {
-                        }
-                    }).show();
+
+            Toast.makeText(this, "Error :" + e , Toast.LENGTH_SHORT).show();
         }
     }
 

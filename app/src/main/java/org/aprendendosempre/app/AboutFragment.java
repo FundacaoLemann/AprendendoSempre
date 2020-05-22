@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -15,11 +16,17 @@ public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.about_fragment, container, false);
+        try{
+            View view = inflater.inflate(R.layout.about_fragment, container, false);
 
-        setupLinks(view);
+            setupLinks(view);
 
-        return view;
+            return view;
+        }catch (Exception e){
+
+            Toast.makeText(requireContext(), "Error :" + e , Toast.LENGTH_SHORT).show();
+            return null;
+        }
     }
 
 
