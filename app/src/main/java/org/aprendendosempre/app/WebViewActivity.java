@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -37,6 +38,7 @@ public class WebViewActivity extends AppCompatActivity {
 
             String link = getIntent().getExtras().getString("Link");
 
+            MenuItem item = findViewById(R.id.menu_forward);
 
             myWebView = new WebView(this);
             myWebView.setWebViewClient(new MyWebViewClient());
@@ -77,10 +79,9 @@ public class WebViewActivity extends AppCompatActivity {
     }
 
     private void onForwardPressed(){
+
         if(myWebView.canGoForward()){
             myWebView.goForward();
-        }else{
-            finish();
         }
     }
 
@@ -137,10 +138,10 @@ public class WebViewActivity extends AppCompatActivity {
                     {
                         URL urlEntrada = null;
                         urlEntrada = new URL(url);
-                        List<String> urlsPermitidas = new ArrayList<String>(25);
+                        List<String> urlsPermitidas = new ArrayList<String>(32);
                         urlsPermitidas.add("aprendendosempre.org/");
                         urlsPermitidas.add("www.aprendizap.com.br/");
-                        urlsPermitidas.add("arvoreeducacao.com.br/");
+                        urlsPermitidas.add("app.arvoreeducacao.com.br/");
                         urlsPermitidas.add("avamec.mec.gov.br/");
                         urlsPermitidas.add("escoladigital.org.br/");
                         urlsPermitidas.add("edu.google.com/");

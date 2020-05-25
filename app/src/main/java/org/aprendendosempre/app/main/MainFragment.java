@@ -115,7 +115,7 @@ public class MainFragment extends Fragment {
     private List<Site> setupList(){
         Site site = new Site(getString(R.string.aprendendo), R.mipmap.aprendendo_sempre_logo, "https://aprendendosempre.org/");
         Site site1 = new Site(getString(R.string.aprendizap), R.mipmap.aprendizap_logo, "https://www.aprendizap.com.br/");
-        Site site2 = new Site(getString(R.string.arvoveredu), R.mipmap.arvore_de_livros, "https://app.arvoreeducacao.com.br/login?platform=arvore");
+        Site site2 = new Site(getString(R.string.arvoveredu), R.mipmap.arvore_de_livros, "https://app.arvoreeducacao.com.br/");
         Site site3 = new Site(getString(R.string.avamec____), R.mipmap.avamec, "http://avamec.mec.gov.br/#/");
         Site site4 = new Site(getString(R.string.escoladigi), R.mipmap.escola_digital, "https://escoladigital.org.br/");
         Site site5 = new Site(getString(R.string.googlesala), R.mipmap.google_sala_de_aula, "https://edu.google.com/intl/pt/products/classroom/?modal_active=none");
