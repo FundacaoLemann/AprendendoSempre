@@ -3,6 +3,7 @@ package org.aprendendosempre.app;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,11 +14,13 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.datami.smi.SdState;
+import com.google.common.net.InternetDomainName;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -29,24 +32,45 @@ public class WebViewActivity extends AppCompatActivity {
 
     WebView myWebView;
     Exception exception;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_web_view);
+            myWebView = findViewById(R.id.webView);
 
             String link = getIntent().getExtras().getString("Link");
 
-            MenuItem item = findViewById(R.id.menu_forward);
+            progressBar = findViewById(R.id.progress);
+            progressBar.setVisibility(View.VISIBLE);
 
-            myWebView = new WebView(this);
             myWebView.setWebViewClient(new MyWebViewClient());
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
+            webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+            webSettings.setDomStorageEnabled(true);
+            webSettings.setAllowFileAccess(true);
+            webSettings.setAllowFileAccessFromFileURLs(true);
             Locale.setDefault(new Locale("pt", "BR"));
-            setContentView(myWebView);
             myWebView.loadUrl(link);
+
+            myWebView.setWebViewClient(new WebViewClient(){
+                @Override
+                public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                    super.onPageStarted(view, url, favicon);
+                    progressBar.setVisibility(View.VISIBLE);
+                }
+
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    super.onPageFinished(view, url);
+                    progressBar.setVisibility(View.GONE);
+                    myWebView.setVisibility(View.VISIBLE);
+                }
+            });
+
         }
         catch (Exception e)
         {
@@ -109,6 +133,18 @@ public class WebViewActivity extends AppCompatActivity {
     private class MyWebViewClient extends WebViewClient {
 
         @Override
+        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+            super.onPageStarted(view, url, favicon);
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            super.onReceivedError(view, errorCode, description, failingUrl);
+            Log.d("Error", description);
+        }
+
+        @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
             view.loadUrl(
@@ -122,6 +158,8 @@ public class WebViewActivity extends AppCompatActivity {
                     "}" +
                     "}" +
                     "})()");
+            progressBar.setVisibility(View.INVISIBLE);
+            myWebView.setVisibility(View.VISIBLE);
         }
 
 
@@ -132,51 +170,44 @@ public class WebViewActivity extends AppCompatActivity {
                  if(url.startsWith("javascript"))
                      return false;
 
-                if(MainApplication.sdState == SdState.SD_AVAILABLE)
-                {
-                    if (url.startsWith("http") || url.startsWith("https"))
-                    {
-                        URL urlEntrada = null;
-                        urlEntrada = new URL(url);
-                        List<String> urlsPermitidas = new ArrayList<String>(32);
-                        urlsPermitidas.add("aprendendosempre.org/");
-                        urlsPermitidas.add("www.aprendizap.com.br/");
-                        urlsPermitidas.add("app.arvoreeducacao.com.br/");
-                        urlsPermitidas.add("avamec.mec.gov.br/");
-                        urlsPermitidas.add("escoladigital.org.br/");
-                        urlsPermitidas.add("edu.google.com/");
-                        urlsPermitidas.add("pt.khanacademy.org/");
-                        urlsPermitidas.add("www.kinedu.com/pt");
-                        urlsPermitidas.add("novaescola.org.br/");
-                        urlsPermitidas.add("classroom.google.com");
-                        urlsPermitidas.add("accounts.google.com");
+
+                 if (url.startsWith("http") || url.startsWith("https"))
+                 {
+                     if(MainApplication.sdState == SdState.SD_AVAILABLE)
+                     {
+                        URL urlEntrada = new URL(url);
+                        List<String> urlsPermitidas = new ArrayList<String>(25);
+                        urlsPermitidas.add("aprendendosempre.org");
+                        urlsPermitidas.add("aprendizap.com.br");
+                        urlsPermitidas.add("arvoreeducacao.com.br");
+                        urlsPermitidas.add("avamec.mec.gov.br");
+                        urlsPermitidas.add("escoladigital.org.br");
+                        urlsPermitidas.add("google.com");
+                        urlsPermitidas.add("khanacademy.org");
+                        urlsPermitidas.add("kinedu.com");
+                        urlsPermitidas.add("novaescola.org.br");
                         urlsPermitidas.add("googledrive.com");
-                        urlsPermitidas.add("drive.google.com");
-                        urlsPermitidas.add("docs.google.com");
-                        urlsPermitidas.add("c.docs.google.com");
-                        urlsPermitidas.add("sheets.google.com");
-                        urlsPermitidas.add("slides.google.com");
-                        urlsPermitidas.add("takeout.google.com");
-                        urlsPermitidas.add("gg.google.com");
-                        urlsPermitidas.add("script.google.com");
                         urlsPermitidas.add("ssl.google-analytics.com");
-                        urlsPermitidas.add("video.google.com");
                         urlsPermitidas.add("s.ytimg.com");
-                        urlsPermitidas.add("apis.google.com");
                         urlsPermitidas.add("googleapis.com");
                         urlsPermitidas.add("googleusercontent.com");
                         urlsPermitidas.add("gstatic.com");
                         urlsPermitidas.add("gvt1.com");
-                        urlsPermitidas.add("edu.google.com");
-                        urlsPermitidas.add("accounts.youtube.com");
-                        urlsPermitidas.add("myaccount.google.com");
                         urlsPermitidas.add("forms.gle");
+                        urlsPermitidas.add("whatsapp.com");
+                        urlsPermitidas.add("bit.ly");
 
                         //TODO: fazer um filtro inteligente de URLs
                         for (int i = 0; i <= urlsPermitidas.size() -1; i++)
                         {
-                            if(urlEntrada.getAuthority().contains(urlsPermitidas.get(i))) {
-                                return false;
+
+                            String urlAllowed = urlsPermitidas.get(i);
+                            String host = urlEntrada.getHost();
+                            InternetDomainName domain = InternetDomainName.from(host).topPrivateDomain();
+                            String urlInput = domain.toString();
+                            if(urlInput.equals(urlAllowed)){
+                                webView.loadUrl(url);
+                                return true;
                             }
                         }
                         Log.d("ControleAcesso", "Acesso negado a " + url);

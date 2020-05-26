@@ -45,6 +45,7 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
     implementation 'com.datami:smisdk:+'
 
+    implementation("com.google.guava:guava:29.0-android")
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.android.support:appcompat-v7:28.0.2'
     // butter knife

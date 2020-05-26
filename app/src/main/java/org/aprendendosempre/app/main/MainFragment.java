@@ -120,7 +120,7 @@ public class MainFragment extends Fragment {
         Site site4 = new Site(getString(R.string.escoladigi), R.mipmap.escola_digital, "https://escoladigital.org.br/");
         Site site5 = new Site(getString(R.string.googlesala), R.mipmap.google_sala_de_aula, "https://edu.google.com/intl/pt/products/classroom/?modal_active=none");
         Site site6 = new Site(getString(R.string.khanacadem), R.mipmap.khan_academy, "https://pt.khanacademy.org/");
-        Site site7 = new Site(getString(R.string.kinedu____), R.mipmap.kinedu, "https://www.kinedu.com/pt");
+        Site site7 = new Site(getString(R.string.kinedu____), R.mipmap.kinedu, "https://kinedu.com/");
         Site site8 = new Site(getString(R.string.novaescola), R.mipmap.nova_escola, "https://novaescola.org.br/");
 
 
